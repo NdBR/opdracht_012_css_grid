@@ -1,0 +1,60 @@
+/* grid mobiel */
+.container {
+    height:100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:60px 3fr 2fr 60px ;
+    grid-template-areas:
+    "h h h h h h h h h h h h"
+    "m m m m m m m m m m m m"
+    "w w w w w w w w w w w w"
+    "f f f f f f f f f f f f"
+    ;
+}
+.site-header{
+    grid-area: h;
+}
+.site-main{
+    grid-area: m;
+}
+.widget-area{
+    grid-area: w;
+}
+.site-footer{
+    grid-area: f;
+}
+
+/* desktop */
+@media screen and (min-width: 1024px){    
+    
+    .container {
+        height:100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: 2fr 8fr;
+        grid-template-rows:3fr 2fr 60px ;
+        grid-template-areas:
+        "h m m m m m m m m m m m"
+        "h w w w w w w w w w w w"
+        "h f f f f f f f f f f f"
+        ;
+    }  
+}
+
+/* extra breed scherm */
+@media screen and (min-width: 1424px){    
+    
+    .container {
+        height:100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: 200px 1fr 200px ;
+        grid-template-rows: 1fr 60px ;
+        grid-template-areas:
+        "h m m m m m m m m m m w"
+        "h m m m m m m m m m m w"
+        "h f f f f f f f f f f w"
+        ;
+    }  
+}
